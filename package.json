@@ -1,9 +1,13 @@
 {
   "name": "svelte-headless-button",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerok84/svelte-headless-button"
+  },
   "scripts": {
     "build": "rollup -c",
     "prepublishOnly": "npm run build",
@@ -40,5 +44,10 @@
     "src",
     "dist"
   ],
-  "dependencies": {}
+  "description": "Simple button component without default style.",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Zerok84",
+  "license": "MIT"
 }
