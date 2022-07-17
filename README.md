@@ -27,7 +27,7 @@ function handleClick(e) {
 }
 </script>
 
-<Button id="myButton" name="myButton" on:click={handleClick} />
+<Button id="myButton" name="myButton" on:click={handleClick} text="Hello"/>
 ```
 
 ### Props
@@ -36,6 +36,7 @@ function handleClick(e) {
 | ---- | ----- |
 | `id` | The button id |
 | `name` | The button name |
+| `text` | The button text |
 
 ### Events
 
