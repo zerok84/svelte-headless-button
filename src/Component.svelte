@@ -2,7 +2,6 @@
   import { createEventDispatcher } from 'svelte';
   const dispatch = createEventDispatcher();
 
-  export let text = '';
   export let id = undefined;
   export let name = undefined;
 
@@ -11,7 +10,9 @@
   }
 </script>
 
-<button on:click={handleClick} {id} {name}>{text}</button>
+<button on:click={handleClick} {id} {name}>
+  <slot />
+</button>
 
 <style>
 	button {
