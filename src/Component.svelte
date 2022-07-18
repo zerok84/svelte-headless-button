@@ -5,17 +5,17 @@
   export let id = undefined;
   export let name = undefined;
 
-  export function handleClick(e) {
+  function handleClick(e) {
     dispatch('click', e);
   }
 </script>
 
-<button on:click={handleClick} {id} {name}>
-  <slot />
-</button>
-
-<style>
-	button {
-		all: unset;
-	}
-</style>
+{#if $$props.href}
+  <a href={$$props.href} class={$$props.class} on:click={handleClick} {id}>
+    <slot />
+  </a>
+{:else}
+  <button class={$$props.class} on:click={handleClick} {id} {name}>
+    <slot />
+  </button>
+{/if}
