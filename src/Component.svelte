@@ -11,11 +11,11 @@
 </script>
 
 {#if $$props.href}
-  <a href={$$props.href} class={$$props.class} on:click={handleClick} {id}>
+  <a style={$$props.style || ''} href={$$props.href} class={$$props.class} on:click={handleClick} {id}>
     <slot />
   </a>
 {:else}
-  <button class={$$props.class} on:click={handleClick} {id} {name}>
+  <button style={$$props.style || ''} class={$$props.class} on:click={handleClick} {id} {name}>
     <slot />
   </button>
 {/if}
