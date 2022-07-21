@@ -4,6 +4,7 @@
 
   export let id = undefined;
   export let name = undefined;
+  export let style = undefined;
 
   function handleClick(e) {
     dispatch('click', e);
@@ -11,11 +12,11 @@
 </script>
 
 {#if $$props.href}
-  <a style={$$props.style || ''} href={$$props.href} class={$$props.class} on:click={handleClick} {id}>
+  <a style={style} href={$$props.href} class={$$props.class} on:click={handleClick} {id}>
     <slot />
   </a>
 {:else}
-  <button style={$$props.style || ''} class={$$props.class} on:click={handleClick} {id} {name}>
+  <button style={style} class={$$props.class} on:click={handleClick} {id} {name}>
     <slot />
   </button>
 {/if}
